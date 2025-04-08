@@ -136,6 +136,12 @@ ENV/
 env.bak/
 venv.bak/
 
+# files
+venv/
+mlruns/
+logs/
+MLOPS_PROJECT_1.egg-info/
+
 # Spyder project settings
 .spyderproject
 .spyproject
