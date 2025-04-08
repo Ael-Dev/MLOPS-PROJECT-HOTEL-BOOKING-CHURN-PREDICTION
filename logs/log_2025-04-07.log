@@ -1,0 +1,325 @@
+2025-04-07 17:27:17,801 - INFO - Starting model training pipeline
+2025-04-07 17:27:17,802 - INFO - Loading data from artifacts/raw\train.csv
+2025-04-07 17:27:17,873 - INFO - Data is loaded successfully
+2025-04-07 17:27:17,873 - INFO - Loading data from artifacts/raw\test.csv
+2025-04-07 17:27:18,040 - INFO - Data is loaded successfully
+2025-04-07 17:27:18,040 - ERROR - Error in loading and splitting data: 'ModelTraining' object has no attribute 'config'
+2025-04-07 17:27:18,041 - ERROR - Error in model training pipeline: 'AttributeError' object has no attribute 'exc_info'
+2025-04-07 17:30:46,607 - INFO - Succesfully read the YAML file
+2025-04-07 17:30:46,646 - INFO - Starting model training pipeline
+2025-04-07 17:30:46,646 - INFO - Loading data from artifacts/raw\train.csv
+2025-04-07 17:30:46,683 - INFO - Data is loaded successfully
+2025-04-07 17:30:46,683 - INFO - Loading data from artifacts/raw\test.csv
+2025-04-07 17:30:46,806 - INFO - Data is loaded successfully
+2025-04-07 17:30:46,853 - ERROR - Error in loading and splitting data: "[('booking_status',)] not found in axis"
+2025-04-07 17:30:46,854 - ERROR - Error in model training pipeline: 'KeyError' object has no attribute 'exc_info'
+2025-04-07 17:31:23,659 - INFO - Succesfully read the YAML file
+2025-04-07 17:31:23,660 - INFO - Starting model training pipeline
+2025-04-07 17:31:23,660 - INFO - Loading data from artifacts/raw\train.csv
+2025-04-07 17:31:23,706 - INFO - Data is loaded successfully
+2025-04-07 17:31:23,706 - INFO - Loading data from artifacts/raw\test.csv
+2025-04-07 17:31:23,849 - INFO - Data is loaded successfully
+2025-04-07 17:31:23,851 - ERROR - Error in loading and splitting data: "[('booking_status',)] not found in axis"
+2025-04-07 17:31:23,851 - ERROR - Error in model training pipeline: 'KeyError' object has no attribute 'exc_info'
+2025-04-07 17:34:01,489 - INFO - Succesfully read the YAML file
+2025-04-07 17:34:01,490 - INFO - Starting model training pipeline
+2025-04-07 17:34:01,490 - INFO - Loading data from artifacts/raw\train.csv
+2025-04-07 17:34:01,527 - INFO - Data is loaded successfully
+2025-04-07 17:34:01,527 - INFO - Loading data from artifacts/raw\test.csv
+2025-04-07 17:34:01,649 - INFO - Data is loaded successfully
+2025-04-07 17:34:01,651 - ERROR - Error in loading and splitting data: "[('booking_status',)] not found in axis"
+2025-04-07 17:34:01,651 - ERROR - Error in model training pipeline: 'KeyError' object has no attribute 'exc_info'
+2025-04-07 17:34:24,738 - INFO - Succesfully read the YAML file
+2025-04-07 17:34:24,738 - INFO - Starting model training pipeline
+2025-04-07 17:34:24,739 - INFO - Loading data from artifacts/raw\train.csv
+2025-04-07 17:34:24,780 - INFO - Data is loaded successfully
+2025-04-07 17:34:24,780 - INFO - Loading data from artifacts/raw\test.csv
+2025-04-07 17:34:24,937 - INFO - Data is loaded successfully
+2025-04-07 17:34:24,938 - ERROR - Error in loading and splitting data: "[('booking_status',)] not found in axis"
+2025-04-07 17:34:24,939 - ERROR - Error in model training pipeline: 'KeyError' object has no attribute 'exc_info'
+2025-04-07 17:35:29,417 - INFO - Succesfully read the YAML file
+2025-04-07 17:35:29,418 - INFO - Starting model training pipeline
+2025-04-07 17:35:29,418 - INFO - Loading data from artifacts/raw\train.csv
+2025-04-07 17:35:29,453 - INFO - Data is loaded successfully
+2025-04-07 17:35:29,453 - INFO - Loading data from artifacts/raw\test.csv
+2025-04-07 17:35:29,573 - INFO - Data is loaded successfully
+2025-04-07 17:35:29,626 - INFO - Data loaded and splitted for model training.
+2025-04-07 17:35:29,626 - INFO - Initiating model training
+2025-04-07 17:35:29,627 - INFO - Starting hyperparameter tuning
+2025-04-07 17:35:29,627 - INFO - Fitting the model
+2025-04-07 17:35:34,325 - ERROR - Error during model training: 
+All the 8 fits failed.
+It is very likely that your model is misconfigured.
+You can try to debug the error by setting error_score='raise'.
+
+Below are more details about the failures:
+--------------------------------------------------------------------------------
+8 fits failed with the following error:
+Traceback (most recent call last):
+  File "c:\Users\Alex\Desktop\MLOPS\PROJECTS\P1-HOTEL-RESERVATION-PRED\.venv\Lib\site-packages\sklearn\model_selection\_validation.py", line 866, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Alex\Desktop\MLOPS\PROJECTS\P1-HOTEL-RESERVATION-PRED\.venv\Lib\site-packages\lightgbm\sklearn.py", line 1560, in fit
+    super().fit(
+    ~~~~~~~~~~~^
+        X,
+        ^^
+    ...<12 lines>...
+        init_model=init_model,
+        ^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "c:\Users\Alex\Desktop\MLOPS\PROJECTS\P1-HOTEL-RESERVATION-PRED\.venv\Lib\site-packages\lightgbm\sklearn.py", line 1049, in fit
+    self._Booster = train(
+                    ~~~~~^
+        params=params,
+        ^^^^^^^^^^^^^^
+    ...<6 lines>...
+        callbacks=callbacks,
+        ^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "c:\Users\Alex\Desktop\MLOPS\PROJECTS\P1-HOTEL-RESERVATION-PRED\.venv\Lib\site-packages\lightgbm\engine.py", line 297, in train
+    booster = Booster(params=params, train_set=train_set)
+  File "c:\Users\Alex\Desktop\MLOPS\PROJECTS\P1-HOTEL-RESERVATION-PRED\.venv\Lib\site-packages\lightgbm\basic.py", line 3656, in __init__
+    train_set.construct()
+    ~~~~~~~~~~~~~~~~~~~^^
+  File "c:\Users\Alex\Desktop\MLOPS\PROJECTS\P1-HOTEL-RESERVATION-PRED\.venv\Lib\site-packages\lightgbm\basic.py", line 2590, in construct
+    self._lazy_init(
+    ~~~~~~~~~~~~~~~^
+        data=self.data,
+        ^^^^^^^^^^^^^^^
+    ...<9 lines>...
+        position=self.position,
+        ^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "c:\Users\Alex\Desktop\MLOPS\PROJECTS\P1-HOTEL-RESERVATION-PRED\.venv\Lib\site-packages\lightgbm\basic.py", line 2123, in _lazy_init
+    data, feature_name, categorical_feature, self.pandas_categorical = _data_from_pandas(
+                                                                       ~~~~~~~~~~~~~~~~~^
+        data=data,
+        ^^^^^^^^^^
+    ...<2 lines>...
+        pandas_categorical=self.pandas_categorical,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "c:\Users\Alex\Desktop\MLOPS\PROJECTS\P1-HOTEL-RESERVATION-PRED\.venv\Lib\site-packages\lightgbm\basic.py", line 868, in _data_from_pandas
+    _pandas_to_numpy(data, target_dtype=target_dtype),
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Alex\Desktop\MLOPS\PROJECTS\P1-HOTEL-RESERVATION-PRED\.venv\Lib\site-packages\lightgbm\basic.py", line 814, in _pandas_to_numpy
+    _check_for_bad_pandas_dtypes(data.dtypes)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "c:\Users\Alex\Desktop\MLOPS\PROJECTS\P1-HOTEL-RESERVATION-PRED\.venv\Lib\site-packages\lightgbm\basic.py", line 805, in _check_for_bad_pandas_dtypes
+    raise ValueError(
+        f"pandas dtypes must be int, float or bool.\nFields with bad pandas dtypes: {', '.join(bad_pandas_dtypes)}"
+    )
+ValueError: pandas dtypes must be int, float or bool.
+Fields with bad pandas dtypes: Booking_ID: object, type_of_meal_plan: object, room_type_reserved: object, market_segment_type: object
+
+2025-04-07 17:35:34,325 - ERROR - Error in model training pipeline: 'ValueError' object has no attribute 'exc_info'
+2025-04-07 17:46:58,647 - INFO - Succesfully read the YAML file
+2025-04-07 17:46:58,648 - INFO - Starting model training pipeline
+2025-04-07 17:46:58,648 - INFO - Loading data from artifacts/raw\train.csv
+2025-04-07 17:46:58,694 - INFO - Data is loaded successfully
+2025-04-07 17:46:58,694 - INFO - Loading data from artifacts/raw\test.csv
+2025-04-07 17:46:58,854 - INFO - Data is loaded successfully
+2025-04-07 17:46:58,865 - INFO - Data loaded and splitted for model training.
+2025-04-07 17:46:58,866 - INFO - Initiating model training
+2025-04-07 17:46:58,895 - INFO - Starting hyperparameter tuning
+2025-04-07 17:46:58,895 - INFO - Fitting the model
+2025-04-07 17:47:03,373 - ERROR - Error during model training: 
+All the 8 fits failed.
+It is very likely that your model is misconfigured.
+You can try to debug the error by setting error_score='raise'.
+
+Below are more details about the failures:
+--------------------------------------------------------------------------------
+8 fits failed with the following error:
+Traceback (most recent call last):
+  File "c:\Users\Alex\Desktop\MLOPS\PROJECTS\P1-HOTEL-RESERVATION-PRED\.venv\Lib\site-packages\sklearn\model_selection\_validation.py", line 866, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Alex\Desktop\MLOPS\PROJECTS\P1-HOTEL-RESERVATION-PRED\.venv\Lib\site-packages\lightgbm\sklearn.py", line 1560, in fit
+    super().fit(
+    ~~~~~~~~~~~^
+        X,
+        ^^
+    ...<12 lines>...
+        init_model=init_model,
+        ^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "c:\Users\Alex\Desktop\MLOPS\PROJECTS\P1-HOTEL-RESERVATION-PRED\.venv\Lib\site-packages\lightgbm\sklearn.py", line 1049, in fit
+    self._Booster = train(
+                    ~~~~~^
+        params=params,
+        ^^^^^^^^^^^^^^
+    ...<6 lines>...
+        callbacks=callbacks,
+        ^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "c:\Users\Alex\Desktop\MLOPS\PROJECTS\P1-HOTEL-RESERVATION-PRED\.venv\Lib\site-packages\lightgbm\engine.py", line 297, in train
+    booster = Booster(params=params, train_set=train_set)
+  File "c:\Users\Alex\Desktop\MLOPS\PROJECTS\P1-HOTEL-RESERVATION-PRED\.venv\Lib\site-packages\lightgbm\basic.py", line 3656, in __init__
+    train_set.construct()
+    ~~~~~~~~~~~~~~~~~~~^^
+  File "c:\Users\Alex\Desktop\MLOPS\PROJECTS\P1-HOTEL-RESERVATION-PRED\.venv\Lib\site-packages\lightgbm\basic.py", line 2590, in construct
+    self._lazy_init(
+    ~~~~~~~~~~~~~~~^
+        data=self.data,
+        ^^^^^^^^^^^^^^^
+    ...<9 lines>...
+        position=self.position,
+        ^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "c:\Users\Alex\Desktop\MLOPS\PROJECTS\P1-HOTEL-RESERVATION-PRED\.venv\Lib\site-packages\lightgbm\basic.py", line 2227, in _lazy_init
+    return self.set_feature_name(feature_name)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "c:\Users\Alex\Desktop\MLOPS\PROJECTS\P1-HOTEL-RESERVATION-PRED\.venv\Lib\site-packages\lightgbm\basic.py", line 3046, in set_feature_name
+    _safe_call(
+    ~~~~~~~~~~^
+        _LIB.LGBM_DatasetSetFeatureNames(
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+        )
+        ^
+    )
+    ^
+  File "c:\Users\Alex\Desktop\MLOPS\PROJECTS\P1-HOTEL-RESERVATION-PRED\.venv\Lib\site-packages\lightgbm\basic.py", line 313, in _safe_call
+    raise LightGBMError(_LIB.LGBM_GetLastError().decode("utf-8"))
+lightgbm.basic.LightGBMError: Do not support special JSON characters in feature name.
+
+2025-04-07 17:47:03,374 - ERROR - Error in model training pipeline: 'ValueError' object has no attribute 'exc_info'
+2025-04-07 17:47:51,180 - INFO - Succesfully read the YAML file
+2025-04-07 17:47:51,181 - INFO - Starting model training pipeline
+2025-04-07 17:47:51,182 - INFO - Loading data from artifacts/raw\train.csv
+2025-04-07 17:47:51,225 - INFO - Data is loaded successfully
+2025-04-07 17:47:51,225 - INFO - Loading data from artifacts/raw\test.csv
+2025-04-07 17:47:51,377 - INFO - Data is loaded successfully
+2025-04-07 17:47:51,388 - INFO - Data loaded and splitted for model training.
+2025-04-07 17:47:51,475 - INFO - Initiating model training
+2025-04-07 17:47:51,475 - INFO - Starting hyperparameter tuning
+2025-04-07 17:47:51,475 - INFO - Fitting the model
+2025-04-07 17:47:55,877 - ERROR - Error during model training: 
+All the 8 fits failed.
+It is very likely that your model is misconfigured.
+You can try to debug the error by setting error_score='raise'.
+
+Below are more details about the failures:
+--------------------------------------------------------------------------------
+8 fits failed with the following error:
+Traceback (most recent call last):
+  File "c:\Users\Alex\Desktop\MLOPS\PROJECTS\P1-HOTEL-RESERVATION-PRED\.venv\Lib\site-packages\sklearn\model_selection\_validation.py", line 866, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Alex\Desktop\MLOPS\PROJECTS\P1-HOTEL-RESERVATION-PRED\.venv\Lib\site-packages\lightgbm\sklearn.py", line 1560, in fit
+    super().fit(
+    ~~~~~~~~~~~^
+        X,
+        ^^
+    ...<12 lines>...
+        init_model=init_model,
+        ^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "c:\Users\Alex\Desktop\MLOPS\PROJECTS\P1-HOTEL-RESERVATION-PRED\.venv\Lib\site-packages\lightgbm\sklearn.py", line 1049, in fit
+    self._Booster = train(
+                    ~~~~~^
+        params=params,
+        ^^^^^^^^^^^^^^
+    ...<6 lines>...
+        callbacks=callbacks,
+        ^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "c:\Users\Alex\Desktop\MLOPS\PROJECTS\P1-HOTEL-RESERVATION-PRED\.venv\Lib\site-packages\lightgbm\engine.py", line 297, in train
+    booster = Booster(params=params, train_set=train_set)
+  File "c:\Users\Alex\Desktop\MLOPS\PROJECTS\P1-HOTEL-RESERVATION-PRED\.venv\Lib\site-packages\lightgbm\basic.py", line 3656, in __init__
+    train_set.construct()
+    ~~~~~~~~~~~~~~~~~~~^^
+  File "c:\Users\Alex\Desktop\MLOPS\PROJECTS\P1-HOTEL-RESERVATION-PRED\.venv\Lib\site-packages\lightgbm\basic.py", line 2590, in construct
+    self._lazy_init(
+    ~~~~~~~~~~~~~~~^
+        data=self.data,
+        ^^^^^^^^^^^^^^^
+    ...<9 lines>...
+        position=self.position,
+        ^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "c:\Users\Alex\Desktop\MLOPS\PROJECTS\P1-HOTEL-RESERVATION-PRED\.venv\Lib\site-packages\lightgbm\basic.py", line 2123, in _lazy_init
+    data, feature_name, categorical_feature, self.pandas_categorical = _data_from_pandas(
+                                                                       ~~~~~~~~~~~~~~~~~^
+        data=data,
+        ^^^^^^^^^^
+    ...<2 lines>...
+        pandas_categorical=self.pandas_categorical,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "c:\Users\Alex\Desktop\MLOPS\PROJECTS\P1-HOTEL-RESERVATION-PRED\.venv\Lib\site-packages\lightgbm\basic.py", line 868, in _data_from_pandas
+    _pandas_to_numpy(data, target_dtype=target_dtype),
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Alex\Desktop\MLOPS\PROJECTS\P1-HOTEL-RESERVATION-PRED\.venv\Lib\site-packages\lightgbm\basic.py", line 814, in _pandas_to_numpy
+    _check_for_bad_pandas_dtypes(data.dtypes)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "c:\Users\Alex\Desktop\MLOPS\PROJECTS\P1-HOTEL-RESERVATION-PRED\.venv\Lib\site-packages\lightgbm\basic.py", line 805, in _check_for_bad_pandas_dtypes
+    raise ValueError(
+        f"pandas dtypes must be int, float or bool.\nFields with bad pandas dtypes: {', '.join(bad_pandas_dtypes)}"
+    )
+ValueError: pandas dtypes must be int, float or bool.
+Fields with bad pandas dtypes: Booking_ID: object, type_of_meal_plan: object, room_type_reserved: object, market_segment_type: object
+
+2025-04-07 17:47:55,877 - ERROR - Error in model training pipeline: 'ValueError' object has no attribute 'exc_info'
+2025-04-07 17:49:10,183 - INFO - Succesfully read the YAML file
+2025-04-07 17:49:10,184 - INFO - Starting model training pipeline
+2025-04-07 17:49:10,184 - INFO - Loading data from artifacts/preprocessing\processed_train.csv
+2025-04-07 17:49:10,275 - INFO - Data is loaded successfully
+2025-04-07 17:49:10,275 - INFO - Loading data from artifacts/preprocessing\processed_test.csv
+2025-04-07 17:49:10,309 - INFO - Data is loaded successfully
+2025-04-07 17:49:10,313 - INFO - Data loaded and splitted for model training.
+2025-04-07 17:49:10,337 - INFO - Initiating model training
+2025-04-07 17:49:10,337 - INFO - Starting hyperparameter tuning
+2025-04-07 17:49:10,337 - INFO - Fitting the model
+2025-04-07 17:49:19,004 - INFO - Hyperarameter tuning completed successfully
+2025-04-07 17:49:19,004 - INFO - Best parameters found: {'boosting_type': 'gbdt', 'learning_rate': np.float64(0.1293700315892974), 'max_depth': 23, 'n_estimators': 314, 'num_leaves': 94}
+2025-04-07 17:49:19,004 - INFO - Evaluating the model
+2025-04-07 17:49:19,112 - INFO - Predictions made successfully
+2025-04-07 17:49:19,121 - INFO - Accuracy: 0.8381470367591898
+2025-04-07 17:49:19,121 - INFO - Precision: 0.8381314092647867
+2025-04-07 17:49:19,121 - INFO - Recall: 0.8381470367591898
+2025-04-07 17:49:19,122 - INFO - F1 Score: 0.8381392147899943
+2025-04-07 17:49:19,122 - INFO - Model evaluation completed successfully
+2025-04-07 17:49:19,122 - INFO - Saving the model
+2025-04-07 17:49:19,213 - INFO - Model saved to artifacts/models/lgbm_model.pkl
+2025-04-07 17:49:19,213 - INFO - Model training pipeline completed successfully
+2025-04-07 18:04:11,733 - INFO - Succesfully read the YAML file
+2025-04-07 18:04:14,738 - INFO - Starting model training pipeline
+2025-04-07 18:04:14,738 - INFO - Starting our  MLFLOW experimentation
+2025-04-07 18:04:14,738 - INFO - Logging the training and testing dataset into MLFLOW
+2025-04-07 18:04:14,760 - INFO - Loading data from artifacts/preprocessing\processed_train.csv
+2025-04-07 18:04:14,783 - INFO - Data is loaded successfully
+2025-04-07 18:04:14,783 - INFO - Loading data from artifacts/preprocessing\processed_test.csv
+2025-04-07 18:04:14,819 - INFO - Data is loaded successfully
+2025-04-07 18:04:14,823 - INFO - Data loaded and splitted for model training.
+2025-04-07 18:04:14,823 - INFO - Initiating model training
+2025-04-07 18:04:14,823 - INFO - Starting hyperparameter tuning
+2025-04-07 18:04:14,823 - INFO - Fitting the model
+2025-04-07 18:04:24,018 - INFO - Hyperarameter tuning completed successfully
+2025-04-07 18:04:24,018 - INFO - Best parameters found: {'boosting_type': 'gbdt', 'learning_rate': np.float64(0.1293700315892974), 'max_depth': 23, 'n_estimators': 314, 'num_leaves': 94}
+2025-04-07 18:04:24,019 - INFO - Evaluating the model
+2025-04-07 18:04:24,130 - INFO - Predictions made successfully
+2025-04-07 18:04:24,139 - INFO - Accuracy: 0.8381470367591898
+2025-04-07 18:04:24,139 - INFO - Precision: 0.8381314092647867
+2025-04-07 18:04:24,139 - INFO - Recall: 0.8381470367591898
+2025-04-07 18:04:24,139 - INFO - F1 Score: 0.8381392147899943
+2025-04-07 18:04:24,139 - INFO - Model evaluation completed successfully
+2025-04-07 18:04:24,139 - INFO - Saving the model
+2025-04-07 18:04:24,195 - INFO - Model saved to artifacts/models/lgbm_model.pkl
+2025-04-07 18:04:24,195 - INFO - Logging the model into MLFLOW
+2025-04-07 18:04:24,200 - INFO - Logging the model parameters into MLFLOW
+2025-04-07 18:04:24,260 - INFO - Logging the model metrics into MLFLOW
+2025-04-07 18:04:24,267 - INFO - Model training pipeline completed successfully
