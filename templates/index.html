@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>HOTEL BOOKING CHURN PREDICTION ❤️</title>
+</head>
+
+<body>
+<div class="container">
+    <h2>Hotel Booking Churn Prediction</h2>
+
+    <form method="POST" id="prediction-form">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label for="lead_time">Lead Time (days)</label>
+                    <input type="number" id="lead_time" name="lead_time" min="1" max="365" required>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label for="no_of_special_request">No of Special Requests</label>
+                    <input type="number" id="no_of_special_request" name="no_of_special_request" min="0" max="10" required>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label for="avg_price_per_room">Avg Price per Room ($)</label>
+                    <input type="number" id="avg_price_per_room" name="avg_price_per_room" min="50" max="500" step="0.01" required>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label for="arrival_month">Arrival Month</label>
+                    <select id="arrival_month" name="arrival_month" required>
+                        <option value="1">January</option>
+                        <option value="2">February</option>
+                        <option value="3">March</option>
+                        <option value="4">April</option>
+                        <option value="5">May</option>
+                        <option value="6">June</option>
+                        <option value="7">July</option>
+                        <option value="8">August</option>
+                        <option value="9">September</option>
+                        <option value="10">October</option>
+                        <option value="11">November</option>
+                        <option value="12">December</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label for="arrival_date">Arrival Date</label>
+                    <select id="arrival_date" name="arrival_date" required>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                        <option value="13">13</option>
+                        <option value="14">14</option>
+                        <option value="15">15</option>
+                        <option value="16">16</option>
+                        <option value="17">17</option>
+                        <option value="18">18</option>
+                        <option value="19">19</option>
+                        <option value="20">20</option>
+                        <option value="21">21</option>
+                        <option value="22">22</option>
+                        <option value="23">23</option>
+                        <option value="24">24</option>
+                        <option value="25">25</option>
+                        <option value="26">26</option>
+                        <option value="27">27</option>
+                        <option value="28">28</option>
+                        <option value="29">29</option>
+                        <option value="30">30</option>
+                        <option value="31">31</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label for="market_segment_type">Market Segment Type</label>
+                    <select id="market_segment_type" name="market_segment_type" required>
+                        <option value="0">Aviation</option>
+                        <option value="1">Complimentary</option>
+                        <option value="2">Corporate</option>
+                        <option value="3">Offline</option>
+                        <option value="4">Online</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label for="no_of_week_nights">No of Week Nights</label>
+                    <input type="number" id="no_of_week_nights" name="no_of_week_nights" min="0" max="7" required>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label for="no_of_weekend_nights">No of Weekend Nights</label>
+                    <input type="number" id="no_of_weekend_nights" name="no_of_weekend_nights" min="0" max="2" required>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label for="type_of_meal_plan">Type of Meal Plan</label>
+                    <select id="type_of_meal_plan" name="type_of_meal_plan" required>
+                        <option value="0">Meal Plan 1</option>
+                        <option value="1">Meal Plan 2</option>
+                        <option value="2">Meal Plan 3</option>
+                        <option value="3">Not Selected</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label for="room_type_reserved">Room Type Reserved</label>
+                    <select id="room_type_reserved" name="room_type_reserved" required>
+                        <option value="0">Room Type 1</option>
+                        <option value="1">Room Type 2</option>
+                        <option value="2">Room Type 3</option>
+                        <option value="3">Room Type 4</option>
+                        <option value="4">Room Type 5</option>
+                        <option value="5">Room Type 6</option>
+                        <option value="6">Room Type 7</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <button type="submit">Predecir</button>
+    </form>
+
+    <!-- Result container, initially hidden -->
+    <div class="result" id="result-container" style="display: none;">
+        <p id="prediction-result"></p>
+    </div>
+</div>
+
+<script>
+    // JavaScript to handle form submission and result display
+    document.getElementById("prediction-form").addEventListener("submit", function(event) {
+        event.preventDefault();  // Prevent form submission
+
+        // Simulate the result
+        var prediction = Math.random() < 0.5 ? 0 : 1;  // Mock result: 50% chance for cancellation
+
+        var resultText = prediction === 0 
+            ? "The Customer is going to cancel his reservation"
+            : "The Customer is not going to cancel his reservation";
+
+        // Show the result container
+        document.getElementById("result-container").style.display = "block";
+        document.getElementById("prediction-result").textContent = resultText;
+    });
+</script>
+
+</body>
+</html>
