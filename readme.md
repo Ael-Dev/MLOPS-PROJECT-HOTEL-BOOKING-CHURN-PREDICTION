@@ -1,6 +1,9 @@
-# Mi Proyecto MLOps
+# Mi Proyecto MLOps: HOTEL BOOKING CHURN PREDICTION
 
-Este es un proyecto MLOps end-to-end que incluye las siguientes carpetas y archivos:
+Este es un proyecto MLOps end-to-end
+
+## Aplicación Web
+![Interface grafica](./static/images/app_interface.jpg)
 
 ## Estructura del Proyecto
 
